@@ -20,7 +20,6 @@ export const displayItem = (payload) => ({
 export async function fetchData(dispatch) {
   const response = await fetch(BASE_URL);
   const data = await response.json();
-  console.log('okok');
   console.log(data);
   dispatch(displayItem);
 }

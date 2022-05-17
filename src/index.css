@@ -1,19 +1,42 @@
 body {
   padding: 0;
+  background-color: rgb(233, 64, 157);
+  color: white;
 }
 
-.header-container {
-  display: flex;
-  background-color: lightgreen;
-}
+@media only screen and (max-width: 600px) {
+  .header-container {
+    display: flex;
+    background-color: rgb(237, 165, 165);
+    height: 50%;
+  }
 
-.headerItem {
-  display: flex;
-  flex-direction: row;
-}
+  .headerItem {
+    display: flex;
+    flex-direction: row;
+  }
 
-li {
-  text-decoration: none;
-  padding-left: 1rem;
-  list-style: none;
+  li {
+    text-decoration: none;
+    padding-left: 1rem;
+    list-style: none;
+  }
+
+  .home-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .grid-item {
+    border: 2px solid black;
+  }
+
+  .country-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .asia-country {
+    border: 2px solid black;
+  }
 }
