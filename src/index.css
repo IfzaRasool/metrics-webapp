@@ -1,3 +1,19 @@
 body {
   padding: 0;
 }
+
+.header-container {
+  display: flex;
+  background-color: lightgreen;
+}
+
+.headerItem {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  text-decoration: none;
+  padding-left: 1rem;
+  list-style: none;
+}
