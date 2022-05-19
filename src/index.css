@@ -52,6 +52,10 @@ body {
     font-weight: bold;
   }
 
+  a:hover {
+    color: var(--primar);
+  }
+
   .main-container {
     width: 100%;
   }
@@ -115,20 +119,22 @@ body {
   }
 
   .About {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
     background-color: var(--primar);
-    font-size: 30px;
+    font-size: 25px;
     padding: 2rem;
+    min-height: 44rem;
   }
 
   .About-text {
-    border: 2px solid black;
     width: 95%;
   }
 
   footer {
     border: 1px solid grey;
-    padding-top: 2rem;
-    padding-bottom: 0;
   }
 
   footer > p {
@@ -161,12 +167,4 @@ body {
     padding: 2rem;
     border: 2px solid black;
   }
-
-  /* .span-name {
-    margin-left: 2rem;
-  }
-
-  .span-data {
-    margin-left: 2rem;
-  } */
 }
