@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body {
   padding: 0;
-  background-color: rgb(233, 64, 157);
-  color: white;
+  background-color: #fc5293;
+  color: #f5e9ef;
+  font-family: 'Lato', sans-serif;
 }
 
 @media only screen and (max-width: 600px) {
   .header-container {
     display: flex;
-    background-color: rgb(237, 165, 165);
+    background-color: black;
     height: 50%;
   }
 
@@ -22,13 +25,35 @@ body {
     list-style: none;
   }
 
+  .main {
+    /* margin: 5rem; */
+    padding: 5rem;
+    background-color: #ca4275;
+    font-size: 40px;
+  }
+
+  h2 {
+    background-color: #e73478;
+  }
+
   .home-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
   }
 
   .grid-item {
-    border: 2px solid black;
+    border: 0.5px  ridge #e73478;
+    padding: 7rem 0 2rem 5rem;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .grid-item:nth-child(3n -2) {
+    background-color: #e73478;
+  }
+
+  .cases {
+    font-size: 20px;
   }
 
   .country-container {
