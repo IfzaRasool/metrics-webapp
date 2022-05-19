@@ -4,32 +4,34 @@
 /* eslint-disable no-console */
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { displayData } from '../redux/home';
+import { useSelector } from 'react-redux';
+import { RiArrowRightCircleLine } from 'react-icons/ri';
+// import { displayData } from '../redux/home';
 
 const Home = () => {
   // @ts-ignore
   const countryStores = useSelector((state) => state.homeReducer);
   console.log(countryStores);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const handleCountry = (e) => {
-    e.preventDefault();
-    const countryName = e.target.textContent;
-    // dispatch(displayItem(countryName));
-    // @ts-ignore
-    dispatch(displayData(countryName));
-    console.log('ok', countryName);
-  };
+  // const handleCountry = (e) => {
+  //   e.preventDefault();
+  //   const countryName = e.target.textContent;
+  //   // dispatch(displayItem(countryName));
+  //   // @ts-ignore
+  //   dispatch(displayData(countryName));
+  //   console.log('ok', countryName);
+  // };
   return (
     <div>
       <div className="main">Covid-19 Data</div>
       <h2>STATS BY COUNTRY</h2>
+
       <div className="home-container">
         { Object.entries(countryStores).map((e) => (
-          <div key={e} className="grid-item" onClick={handleCountry}>
-            {' '}
-            {e[0]}
+          <div key={e.id} id={e.id} className="grid-item">
+            <span className="icon"><RiArrowRightCircleLine /></span>
+            <span className="grid-child-item">{e[0]}</span>
             <br />
             <span className="cases">
               Total Cases:

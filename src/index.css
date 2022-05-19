@@ -36,6 +36,10 @@ body {
     background-color: #e73478;
   }
 
+  .icon {
+    margin: 1rem 0 0 14rem;
+  }
+
   .home-container {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -43,9 +47,12 @@ body {
 
   .grid-item {
     border: 0.5px  ridge #e73478;
-    padding: 7rem 0 2rem 5rem;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
+  }
+
+  .grid-child-item {
+    padding-left: 8rem;
   }
 
   .grid-item:nth-child(3n -2) {
@@ -54,6 +61,7 @@ body {
 
   .cases {
     font-size: 20px;
+    padding-left: 8rem;
   }
 
   .country-container {
