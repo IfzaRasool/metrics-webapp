@@ -2,33 +2,48 @@
 /* eslint-disable no-console */
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { PropTypes } from 'prop-types';
 
-const DetailCountry = ({ id }) => {
+const DetailCountry = () => {
   const countryStore = useSelector((state) => state.homeReducer);
-  console.log(countryStore);
+  console.log(countryStore.date);
+  // Object.keys(countryStore);
 
   return (
     <div>
-      <span>{id}</span>
-      <div className="country-container">
-        {countryStore.map((e) => (
-          <div key={e} className="asia-country">
-            {' '}
-            {e}
-            {' '}
+      <div className="main-detail-container">
+        <div className="main-detail-heading">
+          <h3>
+            {countryStore.name}
+            <br />
+            {countryStore.date}
+          </h3>
+        </div>
+        <div className="detail-container">
+          <div>
+            <span className="span-name">Total Cases</span>
+            <span className="span-data">{countryStore.today_confirmed}</span>
           </div>
-        ))}
-      </div>
-      DetailCountry
+          <div>
+            <span className="span-name">Total Deaths</span>
+            <span className="span-data">{countryStore.today_deaths}</span>
+          </div>
+          <div>
+            <span className="span-name">Today Confirmed Cases</span>
+            <span className="span-data">{countryStore.today_new_confirmed}</span>
+          </div>
+          <div>
+            <span className="span-name">Today New Deaths</span>
+            <span className="span-data">{countryStore.today_new_deaths}</span>
+          </div>
+          <div>
+            <span className="span-name">Today Recovered</span>
+            <span className="span-data">{countryStore.today_new_recovered}</span>
+          </div>
 
+        </div>
+      </div>
     </div>
   );
-};
-
-DetailCountry.propTypes = {
-  id: PropTypes.string.isRequired,
-  // handleClick: PropTypes.func.isRequired,
 };
 
 export default DetailCountry;

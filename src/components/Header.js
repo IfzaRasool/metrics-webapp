@@ -2,21 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => (
-  <div>
-    <header className="header-container">
+  <header>
+    <div className="header-container">
       <ul className="headerItem">
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/Details">Details</Link>
-        </li>
-        <li>
-          <Link to="/DetailCountry">DetailCountry</Link>
+          <Link to="/About">About</Link>
         </li>
       </ul>
-    </header>
-  </div>
+    </div>
+  </header>
+
 );
 
 export default Header;

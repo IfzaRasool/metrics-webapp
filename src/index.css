@@ -1,17 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-body {
+*,
+*::before,
+*::after {
+  margin: 0;
   padding: 0;
-  background-color: #fc5293;
-  color: #f5e9ef;
-  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
 }
 
-@media only screen and (max-width: 600px) {
+:root {
+  --font-color: #f6e9f0;
+  --bg-color: #fc5293;
+  --font-family: 'Lato', sans-serif;
+  --main-color: #dc1973;
+  --primar: #ec4c8a;
+}
+
+body {
+  background-color: black;
+  color: var(--font-color);
+}
+
+@media (max-width: 920px) {
+  header {
+    width: 100%;
+  }
+
   .header-container {
     display: flex;
+    flex-direction: column;
     background-color: black;
-    height: 50%;
+    width: 100%;
+    padding: 2rem;
   }
 
   .headerItem {
@@ -21,19 +41,45 @@ body {
 
   li {
     text-decoration: none;
-    padding-left: 1rem;
+    padding-left: 2rem;
     list-style: none;
   }
 
-  .main {
-    /* margin: 5rem; */
-    padding: 5rem;
-    background-color: #ca4275;
-    font-size: 40px;
+  a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 23px;
+    font-weight: bold;
   }
 
-  h2 {
+  .main-container {
+    width: 100%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primar);
+    border: 2px solid green;
+  }
+
+  .logo {
+    width: 20%;
+    height: 20%;
+    margin: 2rem;
+  }
+
+  .covid-heading {
+    padding-top: 4rem;
+    font-size: 35px;
+    background-color: var(--primar);
+    justify-content: center;
+  }
+
+  .stats-heading {
+    padding: 0.7rem;
     background-color: #e73478;
+    border: 1px solid white;
   }
 
   .icon {
@@ -41,18 +87,22 @@ body {
   }
 
   .home-container {
+    width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
+    border: 1px solid black;
+    justify-content: center;
   }
 
   .grid-item {
-    border: 0.5px  ridge #e73478;
+    border: 0.5px  ridge black;
     font-size: 25px;
     font-weight: bold;
+    background-color: var(--primar);
   }
 
   .grid-child-item {
-    padding-left: 8rem;
+    padding-left: 2rem;
   }
 
   .grid-item:nth-child(3n -2) {
@@ -61,7 +111,29 @@ body {
 
   .cases {
     font-size: 20px;
-    padding-left: 8rem;
+    padding-left: 2rem;
+  }
+
+  .About {
+    background-color: var(--primar);
+    font-size: 30px;
+    padding: 2rem;
+  }
+
+  .About-text {
+    border: 2px solid black;
+    width: 95%;
+  }
+
+  footer {
+    border: 1px solid grey;
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+
+  footer > p {
+    color: #f6e9f0;
+    padding-left: 15rem;
   }
 
   .country-container {
@@ -69,7 +141,32 @@ body {
     grid-template-columns: auto auto;
   }
 
-  .asia-country {
+  .main-detail-heading {
+    font-size: 30px;
+    padding: 2rem;
+  }
+
+  .detail-container > div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 25px;
+  }
+
+  .main-detail-container {
+    background-color: var(--primar);
+  }
+
+  .detail-container > div > span {
+    background-color: var(--primar);
+    padding: 2rem;
     border: 2px solid black;
   }
+
+  /* .span-name {
+    margin-left: 2rem;
+  }
+
+  .span-data {
+    margin-left: 2rem;
+  } */
 }

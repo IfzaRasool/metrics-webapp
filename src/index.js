@@ -4,9 +4,9 @@ import './index.css';
 import { Provider } from 'react-redux';
 import App from './App';
 import store from './redux/configureStore';
-import { fetchData } from './redux/home';
+// import { fetchData } from './redux/home';
 
-store.dispatch(fetchData);
+// store.dispatch(fetchData);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
