@@ -21,7 +21,7 @@
 
 ## Live Demo ()
 
-![Covid-19 Tracking data Live Link](https://wondrous-tarsier-5ca459.netlify.app/)
+[Covid-19 Tracking data Live Link](https://wondrous-tarsier-5ca459.netlify.app/)
 
 ## Getting Started
 
