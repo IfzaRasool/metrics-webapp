@@ -1,20 +1,11 @@
-/* eslint-disable no-console */
-/* eslint-disable react/jsx-key */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-// @ts-nocheck
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RiArrowRightCircleLine } from 'react-icons/ri';
-// import { displayData } from '../redux/home';
 import virusc from './images/virusc.png';
 
 const Home = () => {
   const countryStores = useSelector((state) => state.homeReducer);
-  console.log(countryStores);
-  // const dispatch = useDispatch();
   return (
     <div>
       <main className="main-container">

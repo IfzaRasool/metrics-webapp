@@ -1,14 +1,9 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable react/jsx-no-undef */
-/* eslint-disable no-console */
-// @ts-nocheck
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 const DetailCountry = () => {
   const countryStore = useSelector((state) => state.homeReducer);
-  console.log(countryStore);
   const countName = useParams();
   const countriesName = countName.countName;
 
@@ -55,38 +50,6 @@ const DetailCountry = () => {
           ))}
         </div>
       </main>
-      {/* <div className="main-detail-container">
-        <div className="main-detail-heading">
-          <h3>
-            {cName}
-            <br />
-            {countryStore.date}
-          </h3>
-        </div>
-        <div className="detail-container">
-          <div>
-            <span className="span-name">Total Cases</span>
-            <span className="span-data">{countryStore.today_confirmed}</span>
-          </div>
-          <div>
-            <span className="span-name">Total Deaths</span>
-            <span className="span-data">{countryStore.today_deaths}</span>
-          </div>
-          <div>
-            <span className="span-name">Today Confirmed Cases</span>
-            <span className="span-data">{countryStore.today_new_confirmed}</span>
-          </div>
-          <div>
-            <span className="span-name">Today New Deaths</span>
-            <span className="span-data">{countryStore.today_new_deaths}</span>
-          </div>
-          <div>
-            <span className="span-name">Today Recovered</span>
-            <span className="span-data">{countryStore.today_new_recovered}</span>
-          </div>
-
-        </div>
-      </div> */}
     </div>
   );
 };

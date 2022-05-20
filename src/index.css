@@ -44,14 +44,14 @@ li {
   list-style: none;
 }
 
-a {
+.nav {
   text-decoration: none;
   color: var(--font-color);
   font-size: 23px;
   font-weight: bold;
 }
 
-a:hover {
+.nav:hover {
   color: var(--primar);
 }
 
@@ -107,9 +107,15 @@ a:hover {
   background-color: var(--primar);
 }
 
-/* .grid-child-item {
-  padding-left: 2rem;
-} */
+.grid-child-item {
+  list-style: none;
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.grid-child-item:hover {
+  color: black;
+}
 
 .grid-item:nth-child(3n -2) {
   background-color: #e73478;
@@ -194,14 +200,14 @@ footer > p {
     list-style: none;
   }
 
-  a {
+  .nav {
     text-decoration: none;
     color: var(--font-color);
     font-size: 23px;
     font-weight: bold;
   }
 
-  a:hover {
+  .nav:hover {
     color: var(--primar);
   }
 
@@ -254,10 +260,11 @@ footer > p {
     background-color: var(--primar);
   }
 
-  /*
   .grid-child-item {
-    padding-left: 2rem;
-  } */
+    list-style: none;
+    text-decoration: none;
+    color: var(--font-color);
+  }
 
   .grid-item:nth-child(3n -2) {
     background-color: #e73478;
