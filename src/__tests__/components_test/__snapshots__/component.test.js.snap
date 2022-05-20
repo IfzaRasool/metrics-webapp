@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`test snapshots for all components renders Detail page correctly 1`] = `
+<div>
+  <main>
+    <div
+      className="main-detail-container"
+    />
+  </main>
+</div>
+`;
+
 exports[`test snapshots for all components renders home page correctly 1`] = `
 <div>
   <main
@@ -31,32 +41,11 @@ exports[`test snapshots for all components renders home page correctly 1`] = `
 </div>
 `;
 
-exports[`test snapshots for all components renders rocket page correctly 1`] = `
+exports[`test snapshots for all components renders home page correctly 2`] = `
 <div>
-  <main
-    className="main-container"
-  >
+  <main>
     <div
-      className="main"
-    >
-      <img
-        alt="logo"
-        className="logo"
-        src="virusc.png"
-      />
-      <h2
-        className="covid-heading"
-      >
-        Covid-19 Tracking Cases
-      </h2>
-    </div>
-    <h2
-      className="stats-heading"
-    >
-      STATS BY COUNTRY
-    </h2>
-    <div
-      className="home-container"
+      className="main-detail-container"
     />
   </main>
 </div>

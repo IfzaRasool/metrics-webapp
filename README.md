@@ -6,11 +6,22 @@
 
 ## Built With
 
+- Html
+- Css
+- Js
 - React
+- Redux
+- Technologies used:
+  > webpack,
+  > AJAX,
+  > API,
+  > JSON,
+  > Babel,
+  > Thunker
 
 ## Live Demo ()
 
-![project2](./src/components/images/project.png)
+[Covid-19 Tracking data Live Link](https://wondrous-tarsier-5ca459.netlify.app/)
 
 ## Getting Started
 
@@ -43,6 +54,7 @@ npm run test
 👤 **Ifza Rasool**
 
 - GitHub: [@IfzaRasool](https://github.com/IfzaRasool)
+- LinkedIn: [@IfzaRasool](https://www.linkedin.com/in/ifza-arain/)
 
 ## 🤝 Contributing
 
@@ -63,3 +75,4 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
