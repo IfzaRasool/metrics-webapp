@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const DISPLAY_ITEM = 'DISPLAY_ITEM';
 const DISPLAY_COUNTRYITEM = 'DISPLAY_COUNTRYITEM';
 const BASE_URL = 'https://api.covid19tracking.narrativa.com/api/2020-03-10';
@@ -29,22 +30,25 @@ export async function fetchData(dispatch) {
   const data = await response.json();
   Object.entries(data).forEach((des) => {
     const allCountry = des[1]['2020-03-10'].countries;
-    dispatch(displayCountry(allCountry));
+    const len = Object.keys(allCountry).length;
+    if (len > 0) {
+      dispatch(displayCountry(allCountry));
+    }
   });
 }
 
-export const displayData = (countryName) => async (dispatch) => {
-  const response = await fetch(BASE_URL);
-  const data = await response.json();
-  Object.entries(data).forEach((des) => {
-    const res = des[1]['2020-03-10'].countries;
-    Object.entries(res).forEach((e) => {
-      const idName = e[1].id;
-      if (idName === countryName) {
-        const info = e[1];
-        dispatch(displayItem(info));
-      }
-    });
-  });
-};
+// export const displayData = (countryName) => async (dispatch) => {
+//   const response = await fetch(BASE_URL);
+//   const data = await response.json();
+//   Object.entries(data).forEach((des) => {
+//     const res = des[1]['2020-03-10'].countries;
+//     Object.entries(res).forEach((e) => {
+//       const idName = e[1].id;
+//       if (idName === countryName) {
+//         const info = e[1];
+//         dispatch(displayItem(info));
+//       }
+//     });
+//   });
+// };
 export default homeReducer;

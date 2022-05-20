@@ -21,6 +21,155 @@ body {
   color: var(--font-color);
 }
 
+header {
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 100%;
+  padding: 2rem;
+}
+
+.headerItem {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  text-decoration: none;
+  padding-left: 2rem;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--primar);
+}
+
+.main-container {
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--primar);
+  border: 2px solid green;
+}
+
+.logo {
+  width: 10%;
+  height: 10%;
+  margin-left: 12rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.covid-heading {
+  padding-top: 6rem;
+  padding-left: 6rem;
+  font-size: 50px;
+  background-color: var(--primar);
+  justify-content: center;
+}
+
+.stats-heading {
+  padding: 0.7rem;
+  background-color: #e73478;
+  border: 1px solid white;
+}
+
+.icon {
+  margin: 1rem 0 0 14rem;
+}
+
+.home-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border: 1px solid black;
+  justify-content: center;
+}
+
+.grid-item {
+  border: 0.5px  ridge black;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: var(--primar);
+}
+
+/* .grid-child-item {
+  padding-left: 2rem;
+} */
+
+.grid-item:nth-child(3n -2) {
+  background-color: #e73478;
+}
+
+.cases {
+  font-size: 20px;
+  padding-left: 2rem;
+}
+
+.About {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--primar);
+  font-size: 25px;
+  padding: 2rem;
+  min-height: 44rem;
+}
+
+.About-text {
+  width: 95%;
+}
+
+footer {
+  border: 1px solid grey;
+}
+
+footer > p {
+  color: #f6e9f0;
+  padding-left: 48%;
+}
+
+.country-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.main-detail-heading {
+  font-size: 30px;
+  padding: 2rem;
+}
+
+.detail-container > div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  font-size: 25px;
+}
+
+.main-detail-container {
+  background-color: var(--primar);
+}
+
+.detail-container > div > span {
+  background-color: var(--primar);
+  padding: 2rem;
+  border: 2px solid black;
+}
+
 @media (max-width: 920px) {
   header {
     width: 100%;
@@ -105,9 +254,10 @@ body {
     background-color: var(--primar);
   }
 
+  /*
   .grid-child-item {
     padding-left: 2rem;
-  }
+  } */
 
   .grid-item:nth-child(3n -2) {
     background-color: #e73478;

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header';
+// @ts-ignore
 import DetailCountry from './components/DetailCountry';
 import { About } from './components/About';
 import Footer from './components/footer';
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
-          <Route path="/DetailCountry" element={<DetailCountry />} />
+          <Route path="/DetailCountry/:countName" element={<DetailCountry />} />
         </Routes>
         <Footer />
       </Router>

@@ -1,17 +1,20 @@
+/* eslint-disable no-console */
+/* eslint-disable react/jsx-key */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 // @ts-nocheck
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RiArrowRightCircleLine } from 'react-icons/ri';
-import { displayData } from '../redux/home';
+// import { displayData } from '../redux/home';
 import virusc from './images/virusc.png';
 
 const Home = () => {
   const countryStores = useSelector((state) => state.homeReducer);
-  const dispatch = useDispatch();
+  console.log(countryStores);
+  // const dispatch = useDispatch();
   return (
     <div>
       <main className="main-container">
@@ -23,16 +26,18 @@ const Home = () => {
 
         <div className="home-container">
           { Object.entries(countryStores).map((e) => (
-            <div key={e} id={e[1].id} className="grid-item" onClick={() => dispatch(displayData(e[1].id))}>
-              <span className="icon"><RiArrowRightCircleLine /></span>
-              <br />
-              <Link to="/DetailCountry" className="grid-child-item">{e[0]}</Link>
-              <br />
-              <span className="cases">
-                Total Cases:
-                {e[1].today_confirmed}
-              </span>
-            </div>
+            <Link to={`/DetailCountry/${e[1].id}`} className="grid-child-item" key={e[1].id}>
+              <div key={e[1].id} className="grid-item">
+                <span className="icon"><RiArrowRightCircleLine /></span>
+                <br />
+                {e[0]}
+                <br />
+                <span className="cases">
+                  Total Cases:
+                  {e[1].today_confirmed}
+                </span>
+              </div>
+            </Link>
           ))}
         </div>
       </main>

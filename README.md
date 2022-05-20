@@ -2,7 +2,7 @@
 
 # COvid-19 Tracking Data App
 
-> Covid-19 Tracking Data App:
+> Covid-19 Tracking Data App:This is a mobile web application to check the data on the total covid19 confirmed cases and deaths, check data for all countries with recorded cases. It also has a details page to check for the statistics for each region/state if available.
 
 ## Built With
 
