@@ -76,7 +76,7 @@ li {
 
 .covid-heading {
   padding-top: 6rem;
-  padding-left: 6rem;
+  padding-left: 4rem;
   font-size: 50px;
   background-color: var(--primar);
   justify-content: center;
@@ -230,6 +230,7 @@ footer > p {
 
   .covid-heading {
     padding-top: 4rem;
+    padding-left: 0;
     font-size: 35px;
     background-color: var(--primar);
     justify-content: center;

@@ -10,7 +10,7 @@
 
 ## Live Demo ()
 
-![project2](https://user-images.githubusercontent.com/93009273/165782363-20613337-33fb-4fe7-8833-560597a1c7e3.png)
+![project2](./src/components/images/project.png)
 
 ## Getting Started
 
